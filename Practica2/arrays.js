@@ -1,23 +1,19 @@
-/* let nombre = 'Harold';
-console.log('el nombre es',nombre);
+////////////////// 1 ////////////////////////
+let autos = ['Nissan', 'Ford', 'Toyota', 'Alfa Romeo'];
+//toyota
+//Alfa Romeo
+console.log(autos[2]);
 
-let nombres = ['Harold', 'Luis', 'Daniela', 'Maria', 'Alejandro'];
-//console.log('Los estudiantes son: ', nombres);
-//console.log('el estudiante :', nombres[1]);
-//Alejandro
-
-for (let i = 0; i < nombres.length; i++) {
-    console.log(nombres[i])
-}
-console.log('el tamaño es',nombres.length);
+console.log('el tamaño es',autos.length);
 let nombreLargo = [0];
-for (let i = 0; i < nombres.length; i++) { //i=1
-        if (nombreLargo.length <= nombres[i].length) { //6 <= 4
-            nombreLargo = nombres[i];
+for (let i = 0; i < autos.length; i++) {
+        if (nombreLargo.length <= autos[i].length) { 
+            nombreLargo = autos[i];
         }
 }
 console.log('El nombre mas largo es: ', nombreLargo);
- */
+
+////////////////// 2 ////////////////////////
 let n = 10;
 let a = 0;
 let b = 1;
@@ -33,3 +29,33 @@ for (let i = 0; i < n-2; i++) {
 }
 console.log(fibonacci);
 
+////////////////// 3 ////////////////////////
+let numeros = [2, 6, 8, 15, 17, 22, 7, 14];
+let numeroPar = [];
+let numeroImpar = [];
+let numeroMayor = 0;
+for (let i = 0; i < numeros.length; i++) {
+    let numero = numeros[i];
+    if ((numero%2) === 0) {
+        numeroPar.push(numero);
+    } else {
+        numeroImpar.push(numero);
+    }
+    if (numeroMayor <= numero) {
+        numeroMayor = numero;
+    }
+}
+console.log(numeroPar);
+console.log(numeroImpar);
+console.log(numeroMayor);
+// [2, 6, 8, 22, 14] 
+// [15, 17, 7] 
+// 22
+
+//////////////// 4 ////////////////////
+let cocaCola = ['3lt', '2lt', '500ml', '300ml'];
+let precios = [13, 10, 5, 3];
+
+for (let i = 0; i < cocaCola.length; i++) {
+    console.log(`El precio de la CocaCola de ${cocaCola[i]} es de ${precios[i]}bs`)   
+}
